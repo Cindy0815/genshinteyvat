@@ -1,0 +1,496 @@
+body {
+  font-family: 'Prata', serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 4vw;
+  text-align: center;
+}
+
+h1 {
+  font-size: 7vw;
+  text-align: center;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*Nav bar*/
+#nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-right: 25px;
+}
+
+#nav a, a:visited {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 2.5vw;
+}
+
+#nav a:hover {
+  color: #cfe2f3ff;
+}
+
+.logohome img{
+  position: absolute; 
+  z-index: 2; 
+  width: 15%; 
+  height:auto;
+}
+
+/*Header Vid*/
+header {
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#headerVid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  z-index: -1;
+}
+
+.logo img{
+  position: absolute; 
+  z-index: 2; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+/*Scroll down arrow*/
+.scroll-down {
+  position: absolute;
+  bottom: 130px;
+  width: 25px;
+  height: 25px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: fade_move_down 4s ease-in-out infinite;
+  -moz-animation:    fade_move_down 4s ease-in-out infinite;
+  animation:         fade_move_down 4s ease-in-out infinite;
+}
+
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+  0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@-moz-keyframes fade_move_down {
+  0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@keyframes fade_move_down {
+  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+
+/*CLOUD*/
+.cloud{
+   margin-bottom: -50px;
+}
+
+.cloud img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+/*Intro to Teyvat*/
+.welcometoteyvat::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.welcometoteyvat {
+  position: relative;
+  height: 1000px;
+  background-image: url("https://upload-os-bbs.mihoyo.com/upload/2021/05/26/56567303/fc6a702af6946115a74dc425563b7270_6162920018201365070.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.welcometext {
+  position: relative;
+  color: black;
+  text-align: center;
+  top: 5%;
+  padding: 25px;
+  box-sizing: border-box;
+  z-index: 2; 
+}
+
+.welcometext img{
+  max-width:100%;
+  margin: 15px;
+}
+
+.welcometext h2 {
+  font-size: 4vw;
+}
+
+.welcometext p {
+  font-size: 2vw;
+  line-height: 2;
+  margin: 4vw;
+}
+
+/*Explore: 4 regions*/
+#explore{
+  padding: 50px;
+  background-color: white;
+  position: relative; 
+}
+
+/*Background of explore section*/
+.cloud-top{
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute; 
+  top: 0;
+  left: 50%; 
+  transform: translateX(-50%); 
+  justify-content: center;
+}
+
+.cloud-top img{
+  max-width: 200%; 
+  height: auto;
+  transform: rotate(180deg);
+
+}
+
+.explore-title{
+  position: absolute;
+  margin-top: 50px;
+
+}
+
+.cloud-bottom{
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute; 
+  bottom: 0; 
+  left: 50%; 
+  transform: translateX(-50%); 
+   justify-content: center;
+}
+
+.cloud-bottom img{
+  max-width: 200%; 
+  height: auto;
+
+}
+
+/*4 images with hover effects (explore)*/
+.four-regions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 150px;
+}
+
+.img-container {
+  position: relative;
+  z-index: 1;
+}
+
+.four-regions img {
+  width: 35vw;
+  height: 25vw;
+  margin: 50px;
+  border: 7px solid #e8d8c1;
+  object-fit: cover;
+  filter: brightness(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.four-regions img:hover {
+  filter: brightness(50%);
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  
+}
+
+.img-container:hover{
+  opacity: 1;
+}
+
+/*HERO SECTION: INTRO TO EACH REGION*/
+.overlay {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.overlay2 {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.banner {
+  position: relative;
+  height: 115vh;
+  width: 100%;
+}
+
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.infotext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+
+}
+
+.infotext p {
+  font-size: 2vw;
+  line-height: 2;
+  margin-top: -2rem;
+}
+
+.infotext img{
+  width: 12vw;
+  height: 12vw;
+  object-fit: cover;
+  margin-bottom: -4rem;
+}
+
+/*LANDMARKS*/
+.landmark{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.container{
+  width: 85%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.container img{
+  object-fit: cover;
+  width: 100%;
+  height: 50vw;
+}
+
+.image-text-container{
+  position: relative;
+}
+
+.image-text-container .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column; 
+  background-color: rgba(0, 0, 0,0.5);
+}
+
+.info h3{
+  font-size: 3vw;
+  margin-left: 30px;
+  margin-bottom: -5px; 
+  color: white;
+}
+
+.info p {
+  margin-left: 30px;
+  font-size: 1.5vw;
+  margin-right: 30px;
+  color: white;
+}
+
+/*Mondstadt characters*/
+#mond-char {
+  padding: 50px;
+  background-image: url("https://wallpapercave.com/wp/wp8732481.png");
+  position: relative; 
+  background-size: cover;
+
+}
+/*liyue characters*/
+#liyue-char {
+  padding: 50px;
+  background-image: url("https://rare-gallery.com/mocahbig/422644-video-games-Genshin-Genshin-Impact-landscape.png");
+  position: relative; 
+  background-size: cover;
+}
+
+/*Inazuma characters*/
+#ina-char {
+  padding: 50px;
+  background-image: url("https://www.pcgamesn.com/wp-content/sites/pcgamesn/2021/07/genshin-impact-how-to-get-to-inazuma.jpg");
+  position: relative; 
+  background-size: cover;
+  background-position: center;
+
+}
+
+#sumeru-char{
+   padding: 50px;
+  background-image: url("https://files.catbox.moe/u7v7yr.jpg");
+  position: relative; 
+  background-size: cover;
+  background-position: center;
+}
+/*character cards*/
+.cardcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.char-card{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+.char-card img{
+  object-fit: cover;
+  width: 100%;
+  height:auto;
+}
+
+.morechar img{
+  filter: brightness(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.morechar img:hover {
+  filter: brightness(50%);
+}
+
+/*Bottom nav*/
+.nav-link2{
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.nav-link2 a {
+  margin-right: 50px;
+}
+
+.nav2 a, a:visited {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 2vw;
+}
+
+.nav2 a:hover {
+  color: #cfe2f3ff;
+}
+
+.glide__arrow {
+  background-color: white !important;
+  color: black !important;
+
+}
+
+.glide__arrow:hover {
+  background-color: black !important;
+  color: white !important;
+}
