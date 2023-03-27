@@ -344,6 +344,8 @@ header {
   height: 12vw;
   object-fit: cover;
   margin-bottom: -4rem;
+   margin-top: 5rem;
+   pointer-events: none;
 }
 
 /*LANDMARKS*/
